@@ -275,6 +275,14 @@
       display: none;
     }
     .prediction-table th:nth-child(3), .prediction-table td:nth-child(3) { text-align: left; }
+    .prediction-table:not(.detail-view) .edge-score-content {
+      display: inline-block;
+      transform: translateX(-28px);
+    }
+    .prediction-table:not(.detail-view) .edge-status-content {
+      display: inline-block;
+      transform: translateX(24px);
+    }
     .prediction-table th:nth-child(2), .prediction-table td:nth-child(2),
     .prediction-table th:nth-child(5), .prediction-table td:nth-child(5),
     .prediction-table th:nth-child(6), .prediction-table td:nth-child(6),
@@ -581,7 +589,7 @@
       </div>
       <div class="table-wrap">
         <table class="prediction-table">
-          <thead><tr><th>Score順位</th><th>raw順位</th><th>銘柄</th><th>基準終値</th><th>raw予測</th><th>10モデル平均</th><th>校正予測</th><th>上昇確率</th><th>95%予測区間</th><th>10モデル平均順位</th><th>順位ぶれ</th><th>正規化ぶれ</th><th>AI評価</th><th>予測終値</th><th>20日売買代金中央値</th><th>状態</th></tr></thead>
+          <thead><tr><th><span class="edge-score-content">Score順位</span></th><th>raw順位</th><th>銘柄</th><th>基準終値</th><th>raw予測</th><th>10モデル平均</th><th>校正予測</th><th>上昇確率</th><th>95%予測区間</th><th>10モデル平均順位</th><th>順位ぶれ</th><th>正規化ぶれ</th><th>AI評価</th><th>予測終値</th><th>20日売買代金中央値</th><th><span class="edge-status-content">状態</span></th></tr></thead>
           <tbody id="prediction-body"></tbody>
         </table>
         <div id="prediction-empty" class="empty">予測データはまだありません</div>
@@ -824,7 +832,11 @@
               }
               td.append(link);
             } else {
-              td.textContent = value ?? "-";
+              const content = document.createElement("span");
+              if (index === 0) content.className = "edge-score-content";
+              if (index === 15) content.className = "edge-status-content";
+              content.textContent = value ?? "-";
+              td.append(content);
             }
             if (index === 6 && Number.isFinite(prediction)) td.className = prediction >= 0 ? "positive" : "negative";
             tr.append(td);
