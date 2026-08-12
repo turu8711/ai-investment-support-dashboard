@@ -275,13 +275,17 @@
       display: none;
     }
     .prediction-table th:nth-child(3), .prediction-table td:nth-child(3) { text-align: left; }
-    .prediction-table:not(.detail-view) .edge-score-content {
-      display: inline-block;
-      transform: translateX(-28px);
+    .prediction-table th:first-child, .prediction-table td:first-child {
+      width: 105px;
+      min-width: 105px;
+      max-width: 105px;
+      box-sizing: border-box;
     }
-    .prediction-table:not(.detail-view) .edge-status-content {
-      display: inline-block;
-      transform: translateX(24px);
+    .prediction-table th:last-child, .prediction-table td:last-child {
+      width: 88px;
+      min-width: 88px;
+      max-width: 88px;
+      box-sizing: border-box;
     }
     .prediction-table th:nth-child(2), .prediction-table td:nth-child(2),
     .prediction-table th:nth-child(5), .prediction-table td:nth-child(5),
