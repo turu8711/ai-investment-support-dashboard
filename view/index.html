@@ -316,7 +316,7 @@
     .symbol-code { flex: 0 0 auto; font-weight: 700; }
     .symbol-link { color: var(--blue); text-decoration: none; }
     .symbol-link:hover { text-decoration: underline; }
-    .symbol-name { color: var(--muted); font-size: 12px; line-height: 1.35; white-space: normal; }
+    .symbol-name { color: var(--muted); font-size: 12px; line-height: 1.35; white-space: nowrap; }
     th, td {
       height: 42px;
       padding: 8px 12px;
@@ -774,7 +774,7 @@
         const nameWidth = name ? context.measureText(name).width + 8 : 0;
         widest = Math.max(widest, codeWidth + nameWidth + 24);
       });
-      return Math.ceil(Math.min(320, Math.max(160, widest)));
+      return Math.ceil(Math.max(160, widest));
     }
 
     function renderFiles() {
