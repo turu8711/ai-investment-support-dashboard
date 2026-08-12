@@ -274,7 +274,13 @@
     .prediction-table th:nth-child(15), .prediction-table td:nth-child(15) {
       display: none;
     }
-    .prediction-table th:nth-child(3), .prediction-table td:nth-child(3) { text-align: left; }
+    .prediction-table th:nth-child(3), .prediction-table td:nth-child(3) {
+      width: var(--symbol-column-width, 220px);
+      min-width: var(--symbol-column-width, 220px);
+      max-width: var(--symbol-column-width, 220px);
+      box-sizing: border-box;
+      text-align: left;
+    }
     .prediction-table th:first-child, .prediction-table td:first-child {
       width: 105px;
       min-width: 105px;
@@ -305,7 +311,7 @@
     .prediction-table.detail-view th:nth-child(15), .prediction-table.detail-view td:nth-child(15) {
       display: table-cell;
     }
-    .symbol-cell { min-width: 190px; }
+    .symbol-cell { min-width: 0; }
     .symbol-line { display: flex; align-items: baseline; gap: 8px; }
     .symbol-code { flex: 0 0 auto; font-weight: 700; }
     .symbol-link { color: var(--blue); text-decoration: none; }
@@ -754,6 +760,23 @@
       }
     }
 
+    function symbolColumnWidth(rows) {
+      const context = document.createElement("canvas").getContext("2d");
+      if (!context) return 220;
+      const fontFamily = getComputedStyle(document.body).fontFamily;
+      let widest = 0;
+      rows.slice(0, 100).forEach((row) => {
+        const symbol = String(row.symbol ?? "-");
+        const name = String(symbolNames[symbol] ?? "");
+        context.font = `700 13px ${fontFamily}`;
+        const codeWidth = context.measureText(symbol).width;
+        context.font = `400 12px ${fontFamily}`;
+        const nameWidth = name ? context.measureText(name).width + 8 : 0;
+        widest = Math.max(widest, codeWidth + nameWidth + 24);
+      });
+      return Math.ceil(Math.min(320, Math.max(160, widest)));
+    }
+
     function renderFiles() {
       const root = document.getElementById("files");
       const empty = document.getElementById("files-empty");
@@ -787,9 +810,14 @@
           predictionCache.set(target, await response.json());
         }
         const rows = predictionCache.get(target)?.rows ?? [];
+        const visibleRows = rows.slice(0, 100);
+        document.querySelector(".prediction-table").style.setProperty(
+          "--symbol-column-width",
+          `${symbolColumnWidth(visibleRows)}px`,
+        );
         empty.hidden = rows.length > 0;
         empty.textContent = "予測データはまだありません";
-        rows.slice(0, 100).forEach((row) => {
+        visibleRows.forEach((row) => {
           const tr = document.createElement("tr");
           const rawPrediction = row.prediction_return_raw == null ? Number.NaN : Number(row.prediction_return_raw) * 100;
           const ensemblePrediction = row.prediction_return_ensemble_mean == null ? Number.NaN : Number(row.prediction_return_ensemble_mean) * 100;
