@@ -190,6 +190,7 @@
     .chart-series-options .top-n-option:first-child { min-width: 0; background: #fff; }
     .custom-range { display: flex; align-items: center; gap: 5px; }
     .custom-range span { color: var(--muted); }
+    .date-range input { width: 96px; }
 
     .chart-summary {
       display: flex;
@@ -518,6 +519,18 @@
             <span>d</span>
             <button id="apply-custom-days" class="control-button" type="button">適用</button>
           </div>
+          <div class="custom-range date-range">
+            <div class="field">
+              <label for="chart-start-date">開始日</label>
+              <input id="chart-start-date" type="text" maxlength="8" inputmode="numeric" autocomplete="off" placeholder="YYYYMMDD" aria-label="開始日 YYYYMMDD">
+            </div>
+            <span>-</span>
+            <div class="field">
+              <label for="chart-end-date">終了日</label>
+              <input id="chart-end-date" type="text" maxlength="8" inputmode="numeric" autocomplete="off" placeholder="YYYYMMDD" aria-label="終了日 YYYYMMDD">
+            </div>
+            <button id="apply-date-range" class="control-button" type="button">適用</button>
+          </div>
         </div>
       </div>
       <div class="chart-summary">
@@ -586,6 +599,7 @@
     let manifest = null;
     let activeTarget = "target_5d";
     let chartDays = 7;
+    let chartDateRange = null;
     let topNChartMode = "bar";
     let modelChartMode = "bar";
     let chartPayload = { portfolios: null, history: null, benchmark: null, topN: null, model: null, confidence: null, quantiles: null };
@@ -814,6 +828,26 @@
       );
     }
 
+    function clearChartDateRange() {
+      chartDateRange = null;
+      document.getElementById("chart-start-date").value = "";
+      document.getElementById("chart-end-date").value = "";
+    }
+
+    function parseCompactDate(value) {
+      if (!/^\d{8}$/.test(value)) return null;
+      const year = Number(value.slice(0, 4));
+      const month = Number(value.slice(4, 6));
+      const day = Number(value.slice(6, 8));
+      const parsed = new Date(Date.UTC(year, month - 1, day));
+      if (
+        parsed.getUTCFullYear() !== year
+        || parsed.getUTCMonth() + 1 !== month
+        || parsed.getUTCDate() !== day
+      ) return null;
+      return `${value.slice(0, 4)}-${value.slice(4, 6)}-${value.slice(6, 8)}`;
+    }
+
     function selectedSeries(topN) {
       const target = document.getElementById("chart-target").value;
       const liquidity = document.getElementById("chart-liquidity").value;
@@ -872,7 +906,9 @@
         ...canonicalRows.map((row) => row.price_date),
         ...buyHoldRows.map((row) => row.price_date),
       ].filter(Boolean))].sort();
-      const dates = allDates.slice(-chartDays);
+      const dates = chartDateRange
+        ? allDates.filter((date) => date >= chartDateRange.start && date <= chartDateRange.end)
+        : allDates.slice(-chartDays);
       const visible = new Set(dates);
       const finiteOrNull = (value) => Number.isFinite(value) ? value : null;
       const lines = visibleSeries.has("ai") ? entries.map((entry) => {
@@ -1662,6 +1698,7 @@
         chartDays = button.dataset.days === "all"
           ? Number.MAX_SAFE_INTEGER
           : Number(button.dataset.days);
+        clearChartDateRange();
         document.querySelectorAll(".period").forEach((item) => item.classList.toggle("active", item === button));
         drawChart();
       });
@@ -1693,11 +1730,41 @@
       if (!Number.isFinite(days) || days < 1) { input.setCustomValidity("1以上の日数を入力してください"); input.reportValidity(); return; }
       input.setCustomValidity("");
       chartDays = days;
+      clearChartDateRange();
       document.querySelectorAll(".period").forEach((item) => item.classList.remove("active"));
       drawChart();
     });
     document.getElementById("custom-days").addEventListener("keydown", (event) => {
       if (event.key === "Enter") document.getElementById("apply-custom-days").click();
+    });
+    document.getElementById("apply-date-range").addEventListener("click", () => {
+      const startInput = document.getElementById("chart-start-date");
+      const endInput = document.getElementById("chart-end-date");
+      const start = parseCompactDate(startInput.value.trim());
+      const end = parseCompactDate(endInput.value.trim());
+      startInput.setCustomValidity(start ? "" : "YYYYMMDDの8桁で正しい開始日を入力してください");
+      endInput.setCustomValidity(end ? "" : "YYYYMMDDの8桁で正しい終了日を入力してください");
+      if (!start) { startInput.reportValidity(); return; }
+      if (!end) { endInput.reportValidity(); return; }
+      if (start > end) {
+        endInput.setCustomValidity("終了日は開始日以降を指定してください");
+        endInput.reportValidity();
+        return;
+      }
+      endInput.setCustomValidity("");
+      chartDateRange = { start, end };
+      document.querySelectorAll(".period").forEach((item) => item.classList.remove("active"));
+      drawChart();
+    });
+    ["chart-start-date", "chart-end-date"].forEach((id) => {
+      const input = document.getElementById(id);
+      input.addEventListener("input", () => {
+        input.value = input.value.replace(/\D/g, "").slice(0, 8);
+        input.setCustomValidity("");
+      });
+      input.addEventListener("keydown", (event) => {
+        if (event.key === "Enter") document.getElementById("apply-date-range").click();
+      });
     });
     document.getElementById("chart-shell").addEventListener("mousemove", renderTooltip);
     document.getElementById("chart-shell").addEventListener("mouseleave", () => { document.getElementById("chart-tooltip").hidden = true; });
