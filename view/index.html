@@ -274,6 +274,8 @@
     .prediction-table th:nth-child(15), .prediction-table td:nth-child(15) {
       display: none;
     }
+    .prediction-table th, .prediction-table td { text-align: right; }
+    .prediction-table th:nth-child(1), .prediction-table td:nth-child(1),
     .prediction-table th:nth-child(3), .prediction-table td:nth-child(3) { text-align: left; }
     .prediction-table th:nth-child(2), .prediction-table td:nth-child(2),
     .prediction-table th:nth-child(5), .prediction-table td:nth-child(5),
@@ -308,6 +310,7 @@
     }
     th { background: #f7f9fa; color: #4f5d69; font-size: 12px; font-weight: 600; }
     th:nth-child(2), td:nth-child(2), th:last-child, td:last-child { text-align: left; }
+    .prediction-table th:last-child, .prediction-table td:last-child { text-align: right; }
     tbody tr:last-child td { border-bottom: 0; }
     tbody tr:hover { background: #f8fbfd; }
     .positive { color: var(--green); font-weight: 700; }
@@ -325,6 +328,20 @@
       .chart-filters, .range-controls { align-items: flex-end; }
       .chart-shell { height: 330px; }
       .analysis-chart-shell { height: 300px; }
+      .prediction-table:not(.detail-view) {
+        width: 100%;
+        min-width: 100%;
+        table-layout: fixed;
+      }
+      .prediction-table:not(.detail-view) th:nth-child(1) { width: 11%; }
+      .prediction-table:not(.detail-view) th:nth-child(3) { width: 29%; }
+      .prediction-table:not(.detail-view) th:nth-child(4) { width: 15%; }
+      .prediction-table:not(.detail-view) th:nth-child(7) { width: 17%; }
+      .prediction-table:not(.detail-view) th:nth-child(8) { width: 15%; }
+      .prediction-table:not(.detail-view) th:nth-child(16) { width: 13%; }
+      .prediction-table:not(.detail-view) .symbol-cell { min-width: 0; }
+      .prediction-table:not(.detail-view) th,
+      .prediction-table:not(.detail-view) td { padding-left: 9px; padding-right: 9px; }
     }
     @media (max-width: 620px) {
       .topbar, main { padding-left: 14px; padding-right: 14px; }
@@ -349,6 +366,17 @@
         border: 1px solid var(--line-strong);
         border-radius: 4px;
         background: #fff;
+      }
+      .prediction-table:not(.detail-view) { min-width: 570px; }
+      .prediction-table:not(.detail-view) .symbol-cell { min-width: 0; }
+      .prediction-table:not(.detail-view) th,
+      .prediction-table:not(.detail-view) td { padding-left: 7px; padding-right: 7px; }
+      .prediction-table:not(.detail-view) .symbol-line { gap: 5px; }
+      .prediction-table:not(.detail-view) .symbol-name {
+        max-width: 100px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
       .chart-shell { height: 290px; padding-left: 2px; padding-right: 2px; }
       .analysis-toolbar .field { flex: 1 1 130px; }
