@@ -269,9 +269,8 @@
     table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
     .prediction-table { min-width: 1180px; }
     .prediction-table:not(.detail-view) {
-      width: calc(var(--symbol-column-width, 220px) + 583px);
+      width: 100%;
       min-width: calc(var(--symbol-column-width, 220px) + 583px);
-      max-width: calc(var(--symbol-column-width, 220px) + 583px);
       table-layout: fixed;
     }
     .prediction-table th:nth-child(9), .prediction-table td:nth-child(9),
@@ -286,6 +285,11 @@
       max-width: var(--symbol-column-width, 220px);
       box-sizing: border-box;
       text-align: left;
+    }
+    .prediction-table:not(.detail-view) th:nth-child(3),
+    .prediction-table:not(.detail-view) td:nth-child(3) {
+      width: auto;
+      max-width: none;
     }
     .prediction-table th:first-child, .prediction-table td:first-child {
       width: 105px;
