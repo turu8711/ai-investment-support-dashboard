@@ -1,0 +1,115 @@
+{
+  "as_of_date": "2026-08-14",
+  "history_sessions": 0,
+  "year": "2026",
+  "series": {
+    "2026-08-10": [
+      {
+        "benchmark_symbol": "1306.T",
+        "validation_start_date": "2026-08-10",
+        "price_date": "2026-08-10",
+        "benchmark_value": 1.0016397568916364,
+        "daily_return": 0.0016397568916364236,
+        "cumulative_return": 0.0016397568916364236,
+        "return_period_type": "open_to_close",
+        "data_status": "official",
+        "status_reason": null,
+        "run_id": "dc285f21c91d4674967ab0d111bfefc8",
+        "updated_at": "2026-08-17T21:35:34+09:00"
+      },
+      {
+        "benchmark_symbol": "1306.T",
+        "validation_start_date": "2026-08-10",
+        "price_date": "2026-08-12",
+        "benchmark_value": 1.0117123449788863,
+        "daily_return": 0.010056098530381696,
+        "cumulative_return": 0.011712344978886291,
+        "return_period_type": "close_to_close",
+        "data_status": "official",
+        "status_reason": null,
+        "run_id": "dc285f21c91d4674967ab0d111bfefc8",
+        "updated_at": "2026-08-17T21:35:34+09:00"
+      },
+      {
+        "benchmark_symbol": "1306.T",
+        "validation_start_date": "2026-08-10",
+        "price_date": "2026-08-13",
+        "benchmark_value": 1.0199109864641065,
+        "daily_return": 0.008103727829268825,
+        "cumulative_return": 0.019910986464106495,
+        "return_period_type": "close_to_close",
+        "data_status": "official",
+        "status_reason": null,
+        "run_id": "dc285f21c91d4674967ab0d111bfefc8",
+        "updated_at": "2026-08-17T21:35:34+09:00"
+      },
+      {
+        "benchmark_symbol": "1306.T",
+        "validation_start_date": "2026-08-10",
+        "price_date": "2026-08-14",
+        "benchmark_value": 1.0255328977566758,
+        "daily_return": 0.005512158773835374,
+        "cumulative_return": 0.025532897756675776,
+        "return_period_type": "close_to_close",
+        "data_status": "official",
+        "status_reason": null,
+        "run_id": "dc285f21c91d4674967ab0d111bfefc8",
+        "updated_at": "2026-08-17T21:35:34+09:00"
+      }
+    ]
+  },
+  "rows": [
+    {
+      "benchmark_symbol": "1306.T",
+      "validation_start_date": "2026-08-10",
+      "price_date": "2026-08-10",
+      "benchmark_value": 1.0016397568916364,
+      "daily_return": 0.0016397568916364236,
+      "cumulative_return": 0.0016397568916364236,
+      "return_period_type": "open_to_close",
+      "data_status": "official",
+      "status_reason": null,
+      "run_id": "dc285f21c91d4674967ab0d111bfefc8",
+      "updated_at": "2026-08-17T21:35:34+09:00"
+    },
+    {
+      "benchmark_symbol": "1306.T",
+      "validation_start_date": "2026-08-10",
+      "price_date": "2026-08-12",
+      "benchmark_value": 1.0117123449788863,
+      "daily_return": 0.010056098530381696,
+      "cumulative_return": 0.011712344978886291,
+      "return_period_type": "close_to_close",
+      "data_status": "official",
+      "status_reason": null,
+      "run_id": "dc285f21c91d4674967ab0d111bfefc8",
+      "updated_at": "2026-08-17T21:35:34+09:00"
+    },
+    {
+      "benchmark_symbol": "1306.T",
+      "validation_start_date": "2026-08-10",
+      "price_date": "2026-08-13",
+      "benchmark_value": 1.0199109864641065,
+      "daily_return": 0.008103727829268825,
+      "cumulative_return": 0.019910986464106495,
+      "return_period_type": "close_to_close",
+      "data_status": "official",
+      "status_reason": null,
+      "run_id": "dc285f21c91d4674967ab0d111bfefc8",
+      "updated_at": "2026-08-17T21:35:34+09:00"
+    },
+    {
+      "benchmark_symbol": "1306.T",
+      "validation_start_date": "2026-08-10",
+      "price_date": "2026-08-14",
+      "benchmark_value": 1.0255328977566758,
+      "daily_return": 0.005512158773835374,
+      "cumulative_return": 0.025532897756675776,
+      "return_period_type": "close_to_close",
+      "data_status": "official",
+      "status_reason": null,
+      "run_id": "dc285f21c91d4674967ab0d111bfefc8",
+      "updated_at": "2026-08-17T21:35:34+09:00"
+    }
+  ]
+}
