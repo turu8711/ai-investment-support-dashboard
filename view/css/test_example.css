@@ -197,6 +197,20 @@
     .custom-range { display: flex; align-items: center; gap: 5px; }
     .custom-range span { color: var(--muted); }
     .date-range input { width: 96px; }
+    .baseline-range { padding-left: 10px; border-left: 1px solid var(--line); }
+    .baseline-range .field input { width: 106px; }
+    .control-button.secondary { background: #fff; color: var(--muted); }
+    .control-button:disabled { cursor: not-allowed; opacity: 0.48; }
+    .chart-base-status {
+      min-height: 32px;
+      padding: 7px 16px;
+      border-bottom: 1px solid var(--line);
+      background: #f8fafb;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .chart-base-status.active { color: #174f87; }
+    .chart-base-status.error { color: #a33a2b; }
 
     .chart-summary {
       display: flex;
@@ -317,6 +331,8 @@
       .custom-range { width: 100%; }
       .custom-range .field { flex: 1; }
       .custom-range input { width: 100%; }
+      .baseline-range { padding-top: 10px; padding-left: 0; border-top: 1px solid var(--line); border-left: 0; }
+      .baseline-range .field input { width: 100%; }
       .chart-summary { align-items: flex-start; flex-direction: column; }
       .chart-window { text-align: left; }
       .top-n-field { width: 100%; }

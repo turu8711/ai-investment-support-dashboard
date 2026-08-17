@@ -25,6 +25,7 @@
     let activeTarget = "target_5d";
     let chartDays = 7;
     let chartDateRange = null;
+    let chartBaseDate = null;
     let topNChartMode = "bar";
     let modelChartMode = "bar";
     let chartPayload = { portfolios: null, history: null, benchmark: null, topN: null, model: null, confidence: null, quantiles: null };
@@ -331,46 +332,80 @@
         ...canonicalRows.map((row) => row.price_date),
         ...buyHoldRows.map((row) => row.price_date),
       ].filter(Boolean))].sort();
-      const dates = chartDateRange
-        ? allDates.filter((date) => date >= chartDateRange.start && date <= chartDateRange.end)
-        : allDates.slice(-chartDays);
-      const visible = new Set(dates);
       const finiteOrNull = (value) => Number.isFinite(value) ? value : null;
-      const lines = visibleSeries.has("ai") ? entries.map((entry) => {
-        const values = new Map(entry.rows.filter((row) => visible.has(row.price_date)).map((row) => [row.price_date, numericOrNull(row.portfolio_value)]));
+      const rawLines = visibleSeries.has("ai") ? entries.map((entry) => {
+        const valuesByDate = new Map(entry.rows.map((row) => [row.price_date, numericOrNull(row.portfolio_value)]));
         return {
           key: `ai-${entry.topN}`,
           label: `AI Top ${entry.topN}`,
           color: topNAssetColors[entry.topN],
-          values: dates.map((date) => finiteOrNull(values.get(date))),
+          valuesByDate,
         };
       }) : [];
 
       if (visibleSeries.has("matched")) {
-        const matchedMap = new Map(canonicalRows.filter((row) => visible.has(row.price_date)).map((row) => [row.price_date, numericOrNull(row.matched_benchmark_value)]));
-        lines.push({
+        const valuesByDate = new Map(canonicalRows.map((row) => [row.price_date, numericOrNull(row.matched_benchmark_value)]));
+        rawLines.push({
           key: "matched",
           label: `同一日程1306.T (${target === "target_5d" ? "5d" : "20d"})`,
           color: chartColors.matched,
           dash: [7, 4],
-          values: dates.map((date) => finiteOrNull(matchedMap.get(date))),
+          valuesByDate,
         });
       }
       if (visibleSeries.has("buyHold")) {
-        const buyHoldMap = new Map(buyHoldRows.filter((row) => visible.has(row.price_date)).map((row) => [row.price_date, numericOrNull(row.benchmark_value)]));
-        lines.push({
+        const valuesByDate = new Map(buyHoldRows.map((row) => [row.price_date, numericOrNull(row.benchmark_value)]));
+        rawLines.push({
           key: "buyHold",
           label: "1306.T買いっぱなし",
           color: chartColors.buyHold,
           dash: [2, 4],
-          values: dates.map((date) => finiteOrNull(buyHoldMap.get(date))),
+          valuesByDate,
         });
       }
+
+      let effectiveBaseDate = null;
+      let baseDateError = null;
+      const baseValues = new Map();
+      if (chartBaseDate) {
+        effectiveBaseDate = allDates.find((date) => (
+          date >= chartBaseDate
+          && rawLines.length > 0
+          && rawLines.every((line) => {
+            const value = line.valuesByDate.get(date);
+            return Number.isFinite(value) && value !== 0;
+          })
+        )) ?? null;
+        if (effectiveBaseDate) {
+          rawLines.forEach((line) => baseValues.set(line.key, line.valuesByDate.get(effectiveBaseDate)));
+        } else {
+          baseDateError = `${chartBaseDate}以降に、選択系列すべての有効値がそろう日がありません`;
+        }
+      }
+
+      const dates = chartDateRange
+        ? allDates.filter((date) => date >= chartDateRange.start && date <= chartDateRange.end)
+        : allDates.slice(-chartDays);
+      const lines = rawLines.map((line) => ({
+        key: line.key,
+        label: line.label,
+        color: line.color,
+        dash: line.dash,
+        values: dates.map((date) => {
+          const value = finiteOrNull(line.valuesByDate.get(date));
+          if (!Number.isFinite(value)) return null;
+          if (!effectiveBaseDate) return chartBaseDate ? null : value;
+          return value / baseValues.get(line.key);
+        }),
+      }));
       return {
         seriesIds: entries.map((entry) => entry.seriesId).filter(Boolean),
         selectedTopNs: entries.map((entry) => entry.topN),
         dates,
         lines,
+        requestedBaseDate: chartBaseDate,
+        effectiveBaseDate,
+        baseDateError,
       };
     }
 
@@ -387,7 +422,21 @@
       const start = data.dates.at(0);
       const end = data.dates.at(-1);
       const selection = data.selectedTopNs.length > 1 ? ` | Top ${data.selectedTopNs.join(", ")}比較` : "";
-      text("chart-window", available ? `${start} - ${end} | ${available}営業日${selection}` : "データなし");
+      const baseSummary = data.effectiveBaseDate ? ` | 再基準日 ${data.effectiveBaseDate}` : "";
+      text("chart-window", available ? `${start} - ${end} | ${available}営業日${selection}${baseSummary}` : "データなし");
+      const baseStatus = document.getElementById("chart-base-status");
+      baseStatus.className = "chart-base-status";
+      if (data.baseDateError) {
+        baseStatus.classList.add("error");
+        baseStatus.textContent = data.baseDateError;
+      } else if (data.effectiveBaseDate) {
+        baseStatus.classList.add("active");
+        baseStatus.textContent = data.effectiveBaseDate === data.requestedBaseDate
+          ? `${data.effectiveBaseDate}を1.000として再基準化中`
+          : `指定日 ${data.requestedBaseDate} / 実効基準日 ${data.effectiveBaseDate}を1.000として再基準化中`;
+      } else {
+        baseStatus.textContent = "全期間の資産価値を表示中";
+      }
 
       const rect = shell.getBoundingClientRect();
       const width = Math.max(Math.floor(rect.width), 320);
@@ -440,6 +489,19 @@
         ctx.fillStyle = "#66717d";
         ctx.textAlign = "right";
         ctx.fillText(assetValue.format(value), padding.left - 8, y);
+      }
+
+      if (data.effectiveBaseDate && min <= 1 && max >= 1) {
+        const baseY = yAt(1);
+        ctx.save();
+        ctx.setLineDash([5, 4]);
+        ctx.strokeStyle = "#7b8792";
+        ctx.lineWidth = 1.25;
+        ctx.beginPath();
+        ctx.moveTo(padding.left, baseY);
+        ctx.lineTo(width - padding.right, baseY);
+        ctx.stroke();
+        ctx.restore();
       }
 
       const tickCount = Math.min(5, available);
@@ -1190,6 +1252,30 @@
       input.addEventListener("keydown", (event) => {
         if (event.key === "Enter") document.getElementById("apply-date-range").click();
       });
+    });
+    document.getElementById("apply-chart-base").addEventListener("click", () => {
+      const input = document.getElementById("chart-base-date");
+      const parsed = parseCompactDate(input.value.trim());
+      input.setCustomValidity(parsed ? "" : "YYYYMMDDの8桁で正しい日付を入力してください");
+      if (!parsed) { input.reportValidity(); return; }
+      chartBaseDate = parsed;
+      document.getElementById("clear-chart-base").disabled = false;
+      drawChart();
+    });
+    document.getElementById("clear-chart-base").addEventListener("click", () => {
+      chartBaseDate = null;
+      const input = document.getElementById("chart-base-date");
+      input.value = "";
+      input.setCustomValidity("");
+      document.getElementById("clear-chart-base").disabled = true;
+      drawChart();
+    });
+    document.getElementById("chart-base-date").addEventListener("input", (event) => {
+      event.target.value = event.target.value.replace(/\D/g, "").slice(0, 8);
+      event.target.setCustomValidity("");
+    });
+    document.getElementById("chart-base-date").addEventListener("keydown", (event) => {
+      if (event.key === "Enter") document.getElementById("apply-chart-base").click();
     });
     document.getElementById("chart-shell").addEventListener("mousemove", renderTooltip);
     document.getElementById("chart-shell").addEventListener("mouseleave", () => { document.getElementById("chart-tooltip").hidden = true; });

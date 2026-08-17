@@ -1,0 +1,20 @@
+{
+  "as_of_date": "2026-08-17",
+  "history_sessions": 0,
+  "year": "2026",
+  "rows": [
+    {
+      "strategy_sha256": "6e8d5035c2eca01ce24bcc341fe65596a908159f832824cf9a43429a9b3bf21b",
+      "as_of_date": "2026-08-17",
+      "target": "target_5d",
+      "evaluated_count": 3926,
+      "calibration_error": 0.22339260631116598,
+      "prediction_interval_coverage": 0.9332654100866021,
+      "top_bottom_spread": -0.02281237824465517,
+      "raw_rank_correlation": -0.03623083579593989,
+      "score_rank_correlation": -0.0653949012646565,
+      "data_status": "provisional",
+      "run_id": "dc285f21c91d4674967ab0d111bfefc8"
+    }
+  ]
+}

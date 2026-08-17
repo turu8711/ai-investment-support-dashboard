@@ -210,8 +210,17 @@
             </div>
             <button id="apply-date-range" class="control-button" type="button">適用</button>
           </div>
+          <div class="custom-range baseline-range">
+            <div class="field">
+              <label for="chart-base-date">再基準日</label>
+              <input id="chart-base-date" type="text" maxlength="8" inputmode="numeric" autocomplete="off" placeholder="YYYYMMDD" aria-label="再基準日 YYYYMMDD">
+            </div>
+            <button id="apply-chart-base" class="control-button" type="button">再基準化</button>
+            <button id="clear-chart-base" class="control-button secondary" type="button" disabled>解除</button>
+          </div>
         </div>
       </div>
+      <div id="chart-base-status" class="chart-base-status" aria-live="polite">全期間の資産価値を表示中</div>
       <div class="chart-summary">
         <div id="chart-legend" class="legend" aria-label="凡例">
           <span class="legend-item legend-ai"><span class="legend-line"></span>AIポートフォリオ</span>
@@ -251,6 +260,6 @@
     </section>
   </main>
 
-  <script src="js/test_example.js?v=1"></script>
+  <script src="js/test_example.js?v=2"></script>
 </body>
 </html>

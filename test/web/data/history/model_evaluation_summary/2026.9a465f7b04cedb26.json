@@ -1,0 +1,65 @@
+{
+  "as_of_date": "2026-08-17",
+  "history_sessions": 0,
+  "year": "2026",
+  "history": {
+    "target_20d": [
+      {
+        "strategy_sha256": "6e8d5035c2eca01ce24bcc341fe65596a908159f832824cf9a43429a9b3bf21b",
+        "as_of_date": "2026-08-17",
+        "target": "target_20d",
+        "liquidity_profile": "all",
+        "top_n": 0,
+        "metric_scope": "overall",
+        "evaluated_count": 0,
+        "mae": null,
+        "rmse": null,
+        "direction_accuracy": null,
+        "rank_correlation": null,
+        "mean_actual_return": null,
+        "positive_actual_ratio": null,
+        "mean_error": null,
+        "median_absolute_error": null,
+        "matured_prediction_count": 0,
+        "pending_count": 0,
+        "excluded_count": 0,
+        "evaluation_coverage": null,
+        "mean_prediction_return": null,
+        "mean_prediction_error": null,
+        "benchmark_excess_return": null,
+        "all_symbols_excess_return": null,
+        "data_status": "official",
+        "run_id": "dc285f21c91d4674967ab0d111bfefc8"
+      }
+    ],
+    "target_5d": [
+      {
+        "strategy_sha256": "6e8d5035c2eca01ce24bcc341fe65596a908159f832824cf9a43429a9b3bf21b",
+        "as_of_date": "2026-08-17",
+        "target": "target_5d",
+        "liquidity_profile": "all",
+        "top_n": 0,
+        "metric_scope": "overall",
+        "evaluated_count": 3926,
+        "mae": 0.03995641574196191,
+        "rmse": 0.06601600513074228,
+        "direction_accuracy": 0.692047817047817,
+        "rank_correlation": -0.0653949012646565,
+        "mean_actual_return": 0.025318775119817685,
+        "positive_actual_ratio": 0.7083545593479368,
+        "mean_error": -0.022875966274274566,
+        "median_absolute_error": 0.023779085185195455,
+        "matured_prediction_count": 3956,
+        "pending_count": 30,
+        "excluded_count": 0,
+        "evaluation_coverage": 0.9924165824064712,
+        "mean_prediction_return": null,
+        "mean_prediction_error": null,
+        "benchmark_excess_return": null,
+        "all_symbols_excess_return": null,
+        "data_status": "provisional",
+        "run_id": "dc285f21c91d4674967ab0d111bfefc8"
+      }
+    ]
+  }
+}
