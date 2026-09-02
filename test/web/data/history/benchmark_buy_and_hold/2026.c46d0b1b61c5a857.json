@@ -1,5 +1,5 @@
 {
-  "as_of_date": "2026-09-01",
+  "as_of_date": "2026-09-02",
   "history_sessions": 0,
   "year": "2026",
   "series": {
@@ -2029,8 +2029,8 @@
         "return_period_type": "close_to_close",
         "data_status": "official",
         "status_reason": null,
-        "run_id": "0562ee3b1a5842e6bc5f235b81639ae8",
-        "updated_at": "2026-09-02T03:47:41+09:00"
+        "run_id": "3d888b714c4241719fdd030b8091d764",
+        "updated_at": "2026-09-03T04:54:02+09:00"
       },
       {
         "benchmark_symbol": "1306.T",
@@ -2042,8 +2042,8 @@
         "return_period_type": "close_to_close",
         "data_status": "official",
         "status_reason": null,
-        "run_id": "0562ee3b1a5842e6bc5f235b81639ae8",
-        "updated_at": "2026-09-02T03:47:41+09:00"
+        "run_id": "3d888b714c4241719fdd030b8091d764",
+        "updated_at": "2026-09-03T04:54:02+09:00"
       },
       {
         "benchmark_symbol": "1306.T",
@@ -2055,8 +2055,8 @@
         "return_period_type": "close_to_close",
         "data_status": "official",
         "status_reason": null,
-        "run_id": "0562ee3b1a5842e6bc5f235b81639ae8",
-        "updated_at": "2026-09-02T03:47:41+09:00"
+        "run_id": "3d888b714c4241719fdd030b8091d764",
+        "updated_at": "2026-09-03T04:54:02+09:00"
       },
       {
         "benchmark_symbol": "1306.T",
@@ -2068,8 +2068,8 @@
         "return_period_type": "close_to_close",
         "data_status": "official",
         "status_reason": null,
-        "run_id": "0562ee3b1a5842e6bc5f235b81639ae8",
-        "updated_at": "2026-09-02T03:47:41+09:00"
+        "run_id": "3d888b714c4241719fdd030b8091d764",
+        "updated_at": "2026-09-03T04:54:02+09:00"
       },
       {
         "benchmark_symbol": "1306.T",
@@ -2081,8 +2081,8 @@
         "return_period_type": "close_to_close",
         "data_status": "official",
         "status_reason": null,
-        "run_id": "0562ee3b1a5842e6bc5f235b81639ae8",
-        "updated_at": "2026-09-02T03:47:41+09:00"
+        "run_id": "3d888b714c4241719fdd030b8091d764",
+        "updated_at": "2026-09-03T04:54:02+09:00"
       },
       {
         "benchmark_symbol": "1306.T",
@@ -2094,8 +2094,8 @@
         "return_period_type": "close_to_close",
         "data_status": "official",
         "status_reason": null,
-        "run_id": "0562ee3b1a5842e6bc5f235b81639ae8",
-        "updated_at": "2026-09-02T03:47:41+09:00"
+        "run_id": "3d888b714c4241719fdd030b8091d764",
+        "updated_at": "2026-09-03T04:54:02+09:00"
       },
       {
         "benchmark_symbol": "1306.T",
@@ -2107,8 +2107,21 @@
         "return_period_type": "close_to_close",
         "data_status": "official",
         "status_reason": null,
-        "run_id": "0562ee3b1a5842e6bc5f235b81639ae8",
-        "updated_at": "2026-09-02T03:47:41+09:00"
+        "run_id": "3d888b714c4241719fdd030b8091d764",
+        "updated_at": "2026-09-03T04:54:02+09:00"
+      },
+      {
+        "benchmark_symbol": "1306.T",
+        "validation_start_date": "2016-01-05",
+        "price_date": "2026-09-02",
+        "benchmark_value": 2.749352440289609,
+        "daily_return": -0.025705788141473396,
+        "cumulative_return": 1.7493524402896088,
+        "return_period_type": "close_to_close",
+        "data_status": "official",
+        "status_reason": null,
+        "run_id": "3d888b714c4241719fdd030b8091d764",
+        "updated_at": "2026-09-03T04:54:02+09:00"
       }
     ],
     "2016-01-06": [
@@ -4137,8 +4150,8 @@
         "return_period_type": "close_to_close",
         "data_status": "official",
         "status_reason": null,
-        "run_id": "0562ee3b1a5842e6bc5f235b81639ae8",
-        "updated_at": "2026-09-02T03:47:41+09:00"
+        "run_id": "3d888b714c4241719fdd030b8091d764",
+        "updated_at": "2026-09-03T04:54:02+09:00"
       },
       {
         "benchmark_symbol": "1306.T",
@@ -4150,8 +4163,8 @@
         "return_period_type": "close_to_close",
         "data_status": "official",
         "status_reason": null,
-        "run_id": "0562ee3b1a5842e6bc5f235b81639ae8",
-        "updated_at": "2026-09-02T03:47:41+09:00"
+        "run_id": "3d888b714c4241719fdd030b8091d764",
+        "updated_at": "2026-09-03T04:54:02+09:00"
       },
       {
         "benchmark_symbol": "1306.T",
@@ -4163,8 +4176,8 @@
         "return_period_type": "close_to_close",
         "data_status": "official",
         "status_reason": null,
-        "run_id": "0562ee3b1a5842e6bc5f235b81639ae8",
-        "updated_at": "2026-09-02T03:47:41+09:00"
+        "run_id": "3d888b714c4241719fdd030b8091d764",
+        "updated_at": "2026-09-03T04:54:02+09:00"
       },
       {
         "benchmark_symbol": "1306.T",
@@ -4176,8 +4189,8 @@
         "return_period_type": "close_to_close",
         "data_status": "official",
         "status_reason": null,
-        "run_id": "0562ee3b1a5842e6bc5f235b81639ae8",
-        "updated_at": "2026-09-02T03:47:41+09:00"
+        "run_id": "3d888b714c4241719fdd030b8091d764",
+        "updated_at": "2026-09-03T04:54:02+09:00"
       },
       {
         "benchmark_symbol": "1306.T",
@@ -4189,8 +4202,8 @@
         "return_period_type": "close_to_close",
         "data_status": "official",
         "status_reason": null,
-        "run_id": "0562ee3b1a5842e6bc5f235b81639ae8",
-        "updated_at": "2026-09-02T03:47:41+09:00"
+        "run_id": "3d888b714c4241719fdd030b8091d764",
+        "updated_at": "2026-09-03T04:54:02+09:00"
       },
       {
         "benchmark_symbol": "1306.T",
@@ -4202,8 +4215,8 @@
         "return_period_type": "close_to_close",
         "data_status": "official",
         "status_reason": null,
-        "run_id": "0562ee3b1a5842e6bc5f235b81639ae8",
-        "updated_at": "2026-09-02T03:47:41+09:00"
+        "run_id": "3d888b714c4241719fdd030b8091d764",
+        "updated_at": "2026-09-03T04:54:02+09:00"
       },
       {
         "benchmark_symbol": "1306.T",
@@ -4215,8 +4228,21 @@
         "return_period_type": "close_to_close",
         "data_status": "official",
         "status_reason": null,
-        "run_id": "0562ee3b1a5842e6bc5f235b81639ae8",
-        "updated_at": "2026-09-02T03:47:41+09:00"
+        "run_id": "3d888b714c4241719fdd030b8091d764",
+        "updated_at": "2026-09-03T04:54:02+09:00"
+      },
+      {
+        "benchmark_symbol": "1306.T",
+        "validation_start_date": "2016-01-06",
+        "price_date": "2026-09-02",
+        "benchmark_value": 2.744020739328292,
+        "daily_return": -0.025705788141473285,
+        "cumulative_return": 1.7440207393282918,
+        "return_period_type": "close_to_close",
+        "data_status": "official",
+        "status_reason": null,
+        "run_id": "3d888b714c4241719fdd030b8091d764",
+        "updated_at": "2026-09-03T04:54:02+09:00"
       }
     ]
   },
@@ -6246,8 +6272,8 @@
       "return_period_type": "close_to_close",
       "data_status": "official",
       "status_reason": null,
-      "run_id": "0562ee3b1a5842e6bc5f235b81639ae8",
-      "updated_at": "2026-09-02T03:47:41+09:00"
+      "run_id": "3d888b714c4241719fdd030b8091d764",
+      "updated_at": "2026-09-03T04:54:02+09:00"
     },
     {
       "benchmark_symbol": "1306.T",
@@ -6259,8 +6285,8 @@
       "return_period_type": "close_to_close",
       "data_status": "official",
       "status_reason": null,
-      "run_id": "0562ee3b1a5842e6bc5f235b81639ae8",
-      "updated_at": "2026-09-02T03:47:41+09:00"
+      "run_id": "3d888b714c4241719fdd030b8091d764",
+      "updated_at": "2026-09-03T04:54:02+09:00"
     },
     {
       "benchmark_symbol": "1306.T",
@@ -6272,8 +6298,8 @@
       "return_period_type": "close_to_close",
       "data_status": "official",
       "status_reason": null,
-      "run_id": "0562ee3b1a5842e6bc5f235b81639ae8",
-      "updated_at": "2026-09-02T03:47:41+09:00"
+      "run_id": "3d888b714c4241719fdd030b8091d764",
+      "updated_at": "2026-09-03T04:54:02+09:00"
     },
     {
       "benchmark_symbol": "1306.T",
@@ -6285,8 +6311,8 @@
       "return_period_type": "close_to_close",
       "data_status": "official",
       "status_reason": null,
-      "run_id": "0562ee3b1a5842e6bc5f235b81639ae8",
-      "updated_at": "2026-09-02T03:47:41+09:00"
+      "run_id": "3d888b714c4241719fdd030b8091d764",
+      "updated_at": "2026-09-03T04:54:02+09:00"
     },
     {
       "benchmark_symbol": "1306.T",
@@ -6298,8 +6324,8 @@
       "return_period_type": "close_to_close",
       "data_status": "official",
       "status_reason": null,
-      "run_id": "0562ee3b1a5842e6bc5f235b81639ae8",
-      "updated_at": "2026-09-02T03:47:41+09:00"
+      "run_id": "3d888b714c4241719fdd030b8091d764",
+      "updated_at": "2026-09-03T04:54:02+09:00"
     },
     {
       "benchmark_symbol": "1306.T",
@@ -6311,8 +6337,8 @@
       "return_period_type": "close_to_close",
       "data_status": "official",
       "status_reason": null,
-      "run_id": "0562ee3b1a5842e6bc5f235b81639ae8",
-      "updated_at": "2026-09-02T03:47:41+09:00"
+      "run_id": "3d888b714c4241719fdd030b8091d764",
+      "updated_at": "2026-09-03T04:54:02+09:00"
     },
     {
       "benchmark_symbol": "1306.T",
@@ -6324,8 +6350,21 @@
       "return_period_type": "close_to_close",
       "data_status": "official",
       "status_reason": null,
-      "run_id": "0562ee3b1a5842e6bc5f235b81639ae8",
-      "updated_at": "2026-09-02T03:47:41+09:00"
+      "run_id": "3d888b714c4241719fdd030b8091d764",
+      "updated_at": "2026-09-03T04:54:02+09:00"
+    },
+    {
+      "benchmark_symbol": "1306.T",
+      "validation_start_date": "2016-01-05",
+      "price_date": "2026-09-02",
+      "benchmark_value": 2.749352440289609,
+      "daily_return": -0.025705788141473396,
+      "cumulative_return": 1.7493524402896088,
+      "return_period_type": "close_to_close",
+      "data_status": "official",
+      "status_reason": null,
+      "run_id": "3d888b714c4241719fdd030b8091d764",
+      "updated_at": "2026-09-03T04:54:02+09:00"
     },
     {
       "benchmark_symbol": "1306.T",
@@ -8352,8 +8391,8 @@
       "return_period_type": "close_to_close",
       "data_status": "official",
       "status_reason": null,
-      "run_id": "0562ee3b1a5842e6bc5f235b81639ae8",
-      "updated_at": "2026-09-02T03:47:41+09:00"
+      "run_id": "3d888b714c4241719fdd030b8091d764",
+      "updated_at": "2026-09-03T04:54:02+09:00"
     },
     {
       "benchmark_symbol": "1306.T",
@@ -8365,8 +8404,8 @@
       "return_period_type": "close_to_close",
       "data_status": "official",
       "status_reason": null,
-      "run_id": "0562ee3b1a5842e6bc5f235b81639ae8",
-      "updated_at": "2026-09-02T03:47:41+09:00"
+      "run_id": "3d888b714c4241719fdd030b8091d764",
+      "updated_at": "2026-09-03T04:54:02+09:00"
     },
     {
       "benchmark_symbol": "1306.T",
@@ -8378,8 +8417,8 @@
       "return_period_type": "close_to_close",
       "data_status": "official",
       "status_reason": null,
-      "run_id": "0562ee3b1a5842e6bc5f235b81639ae8",
-      "updated_at": "2026-09-02T03:47:41+09:00"
+      "run_id": "3d888b714c4241719fdd030b8091d764",
+      "updated_at": "2026-09-03T04:54:02+09:00"
     },
     {
       "benchmark_symbol": "1306.T",
@@ -8391,8 +8430,8 @@
       "return_period_type": "close_to_close",
       "data_status": "official",
       "status_reason": null,
-      "run_id": "0562ee3b1a5842e6bc5f235b81639ae8",
-      "updated_at": "2026-09-02T03:47:41+09:00"
+      "run_id": "3d888b714c4241719fdd030b8091d764",
+      "updated_at": "2026-09-03T04:54:02+09:00"
     },
     {
       "benchmark_symbol": "1306.T",
@@ -8404,8 +8443,8 @@
       "return_period_type": "close_to_close",
       "data_status": "official",
       "status_reason": null,
-      "run_id": "0562ee3b1a5842e6bc5f235b81639ae8",
-      "updated_at": "2026-09-02T03:47:41+09:00"
+      "run_id": "3d888b714c4241719fdd030b8091d764",
+      "updated_at": "2026-09-03T04:54:02+09:00"
     },
     {
       "benchmark_symbol": "1306.T",
@@ -8417,8 +8456,8 @@
       "return_period_type": "close_to_close",
       "data_status": "official",
       "status_reason": null,
-      "run_id": "0562ee3b1a5842e6bc5f235b81639ae8",
-      "updated_at": "2026-09-02T03:47:41+09:00"
+      "run_id": "3d888b714c4241719fdd030b8091d764",
+      "updated_at": "2026-09-03T04:54:02+09:00"
     },
     {
       "benchmark_symbol": "1306.T",
@@ -8430,8 +8469,21 @@
       "return_period_type": "close_to_close",
       "data_status": "official",
       "status_reason": null,
-      "run_id": "0562ee3b1a5842e6bc5f235b81639ae8",
-      "updated_at": "2026-09-02T03:47:41+09:00"
+      "run_id": "3d888b714c4241719fdd030b8091d764",
+      "updated_at": "2026-09-03T04:54:02+09:00"
+    },
+    {
+      "benchmark_symbol": "1306.T",
+      "validation_start_date": "2016-01-06",
+      "price_date": "2026-09-02",
+      "benchmark_value": 2.744020739328292,
+      "daily_return": -0.025705788141473285,
+      "cumulative_return": 1.7440207393282918,
+      "return_period_type": "close_to_close",
+      "data_status": "official",
+      "status_reason": null,
+      "run_id": "3d888b714c4241719fdd030b8091d764",
+      "updated_at": "2026-09-03T04:54:02+09:00"
     }
   ]
 }

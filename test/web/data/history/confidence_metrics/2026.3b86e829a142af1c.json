@@ -1,5 +1,5 @@
 {
-  "as_of_date": "2026-09-01",
+  "as_of_date": "2026-09-02",
   "history_sessions": 0,
   "year": "2026",
   "rows": [
@@ -79,7 +79,7 @@
       "raw_rank_correlation": -0.006533676321151198,
       "score_rank_correlation": 0.007128604671601998,
       "data_status": "provisional",
-      "run_id": "0562ee3b1a5842e6bc5f235b81639ae8"
+      "run_id": "3d888b714c4241719fdd030b8091d764"
     },
     {
       "strategy_sha256": "6e8d5035c2eca01ce24bcc341fe65596a908159f832824cf9a43429a9b3bf21b",
@@ -92,7 +92,7 @@
       "raw_rank_correlation": -0.006576460386031097,
       "score_rank_correlation": 0.007087194722526933,
       "data_status": "provisional",
-      "run_id": "0562ee3b1a5842e6bc5f235b81639ae8"
+      "run_id": "3d888b714c4241719fdd030b8091d764"
     },
     {
       "strategy_sha256": "6e8d5035c2eca01ce24bcc341fe65596a908159f832824cf9a43429a9b3bf21b",
@@ -105,7 +105,7 @@
       "raw_rank_correlation": -0.006617719199650121,
       "score_rank_correlation": 0.007038816457366514,
       "data_status": "provisional",
-      "run_id": "0562ee3b1a5842e6bc5f235b81639ae8"
+      "run_id": "3d888b714c4241719fdd030b8091d764"
     },
     {
       "strategy_sha256": "6e8d5035c2eca01ce24bcc341fe65596a908159f832824cf9a43429a9b3bf21b",
@@ -118,7 +118,7 @@
       "raw_rank_correlation": -0.006643847858242825,
       "score_rank_correlation": 0.006998514331865331,
       "data_status": "provisional",
-      "run_id": "0562ee3b1a5842e6bc5f235b81639ae8"
+      "run_id": "3d888b714c4241719fdd030b8091d764"
     },
     {
       "strategy_sha256": "6e8d5035c2eca01ce24bcc341fe65596a908159f832824cf9a43429a9b3bf21b",
@@ -131,20 +131,33 @@
       "raw_rank_correlation": -0.006647838167123656,
       "score_rank_correlation": 0.006978441552282498,
       "data_status": "provisional",
-      "run_id": "0562ee3b1a5842e6bc5f235b81639ae8"
+      "run_id": "3d888b714c4241719fdd030b8091d764"
     },
     {
       "strategy_sha256": "6e8d5035c2eca01ce24bcc341fe65596a908159f832824cf9a43429a9b3bf21b",
       "as_of_date": "2026-09-01",
       "target": "target_20d",
-      "evaluated_count": 8582938,
-      "calibration_error": 0.013003635250017057,
-      "prediction_interval_coverage": 0.9605134046173932,
-      "top_bottom_spread": 0.007644074594435441,
-      "raw_rank_correlation": -0.0066484501440906086,
-      "score_rank_correlation": 0.006961654387226098,
+      "evaluated_count": 8583069,
+      "calibration_error": 0.012999305397452369,
+      "prediction_interval_coverage": 0.9605138907772965,
+      "top_bottom_spread": 0.007645210300553797,
+      "raw_rank_correlation": -0.006650565362546055,
+      "score_rank_correlation": 0.006967345630287659,
       "data_status": "provisional",
-      "run_id": "0562ee3b1a5842e6bc5f235b81639ae8"
+      "run_id": "3d888b714c4241719fdd030b8091d764"
+    },
+    {
+      "strategy_sha256": "6e8d5035c2eca01ce24bcc341fe65596a908159f832824cf9a43429a9b3bf21b",
+      "as_of_date": "2026-09-02",
+      "target": "target_20d",
+      "evaluated_count": 8586982,
+      "calibration_error": 0.013079191873093397,
+      "prediction_interval_coverage": 0.960516512087716,
+      "top_bottom_spread": 0.007653082083576483,
+      "raw_rank_correlation": -0.006625627199638672,
+      "score_rank_correlation": 0.006981858227265252,
+      "data_status": "provisional",
+      "run_id": "3d888b714c4241719fdd030b8091d764"
     },
     {
       "strategy_sha256": "6e8d5035c2eca01ce24bcc341fe65596a908159f832824cf9a43429a9b3bf21b",
@@ -222,7 +235,7 @@
       "raw_rank_correlation": 0.010578817102944572,
       "score_rank_correlation": 0.015374631182511445,
       "data_status": "provisional",
-      "run_id": "0562ee3b1a5842e6bc5f235b81639ae8"
+      "run_id": "3d888b714c4241719fdd030b8091d764"
     },
     {
       "strategy_sha256": "6e8d5035c2eca01ce24bcc341fe65596a908159f832824cf9a43429a9b3bf21b",
@@ -235,7 +248,7 @@
       "raw_rank_correlation": 0.010635786978509237,
       "score_rank_correlation": 0.015433867216290116,
       "data_status": "provisional",
-      "run_id": "0562ee3b1a5842e6bc5f235b81639ae8"
+      "run_id": "3d888b714c4241719fdd030b8091d764"
     },
     {
       "strategy_sha256": "6e8d5035c2eca01ce24bcc341fe65596a908159f832824cf9a43429a9b3bf21b",
@@ -248,7 +261,7 @@
       "raw_rank_correlation": 0.01062738683270532,
       "score_rank_correlation": 0.015429743587243963,
       "data_status": "provisional",
-      "run_id": "0562ee3b1a5842e6bc5f235b81639ae8"
+      "run_id": "3d888b714c4241719fdd030b8091d764"
     },
     {
       "strategy_sha256": "6e8d5035c2eca01ce24bcc341fe65596a908159f832824cf9a43429a9b3bf21b",
@@ -261,7 +274,7 @@
       "raw_rank_correlation": 0.010622918523084213,
       "score_rank_correlation": 0.015423043145838155,
       "data_status": "provisional",
-      "run_id": "0562ee3b1a5842e6bc5f235b81639ae8"
+      "run_id": "3d888b714c4241719fdd030b8091d764"
     },
     {
       "strategy_sha256": "6e8d5035c2eca01ce24bcc341fe65596a908159f832824cf9a43429a9b3bf21b",
@@ -274,20 +287,33 @@
       "raw_rank_correlation": 0.010624680967304298,
       "score_rank_correlation": 0.01541930722516862,
       "data_status": "provisional",
-      "run_id": "0562ee3b1a5842e6bc5f235b81639ae8"
+      "run_id": "3d888b714c4241719fdd030b8091d764"
     },
     {
       "strategy_sha256": "6e8d5035c2eca01ce24bcc341fe65596a908159f832824cf9a43429a9b3bf21b",
       "as_of_date": "2026-09-01",
       "target": "target_5d",
-      "evaluated_count": 8590186,
-      "calibration_error": 0.015056657088125673,
-      "prediction_interval_coverage": 0.9564666003739616,
-      "top_bottom_spread": 0.00496253388098699,
-      "raw_rank_correlation": 0.010629978172032524,
-      "score_rank_correlation": 0.015422758987572737,
+      "evaluated_count": 8590227,
+      "calibration_error": 0.015056429788717959,
+      "prediction_interval_coverage": 0.9564668081530325,
+      "top_bottom_spread": 0.004962647700195789,
+      "raw_rank_correlation": 0.010631242076077048,
+      "score_rank_correlation": 0.015424165109902448,
       "data_status": "provisional",
-      "run_id": "0562ee3b1a5842e6bc5f235b81639ae8"
+      "run_id": "3d888b714c4241719fdd030b8091d764"
+    },
+    {
+      "strategy_sha256": "6e8d5035c2eca01ce24bcc341fe65596a908159f832824cf9a43429a9b3bf21b",
+      "as_of_date": "2026-09-02",
+      "target": "target_5d",
+      "evaluated_count": 8594142,
+      "calibration_error": 0.014993723841629123,
+      "prediction_interval_coverage": 0.9564781452296227,
+      "top_bottom_spread": 0.004965289637315694,
+      "raw_rank_correlation": 0.01064562014405935,
+      "score_rank_correlation": 0.015438058472296963,
+      "data_status": "provisional",
+      "run_id": "3d888b714c4241719fdd030b8091d764"
     }
   ]
 }
