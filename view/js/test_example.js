@@ -845,6 +845,7 @@
       lineButton.disabled = metricKey === "mean_prediction_error";
       if (lineButton.disabled && topNChartMode === "line") topNChartMode = "bar";
       setChartMode("topn-chart-modes", topNChartMode);
+      AnalysisDateRanges.controls("topn", topNChartMode === "line", drawTopNChart);
       document.getElementById("topn-line-n-field").hidden = topNChartMode !== "line";
       const definitions = topNSeries(metricKey);
 
@@ -874,7 +875,7 @@
 
       const topN = Number(document.getElementById("topn-line-n").value);
       const key = `${target}|${liquidity}|${topN}`;
-      const rows = chartPayload.topN?.history?.[key] ?? [];
+      const rows = AnalysisDateRanges.filter("topn", chartPayload.topN?.history?.[key] ?? []);
       const officialCount = rows.filter((row) => row.data_status === "official").length;
       text("topn-caption", `${metric.description} | Top ${topN} 時系列 | official ${officialCount}/${rows.length}`);
       drawMetricLineChart({
@@ -907,6 +908,7 @@
       if (barButton.disabled && modelChartMode === "bar") modelChartMode = "line";
       if (lineButton.disabled && modelChartMode === "line") modelChartMode = "bar";
       setChartMode("model-chart-modes", modelChartMode);
+      AnalysisDateRanges.controls("model", modelChartMode === "line", drawModelChart);
 
       const targets = ["target_5d", "target_20d"];
       if (modelChartMode === "bar") {
@@ -938,7 +940,7 @@
       const series = targets.map((target) => ({
         label: target === "target_5d" ? "5d" : "20d",
         color: colors[target],
-        points: (history[usesTopNRank ? `${target}|all|${rankScope}` : target] ?? []).map((row) => ({ date: row.as_of_date, value: numericOrNull(row[metricKey]) })),
+        points: AnalysisDateRanges.filter("model", history[usesTopNRank ? `${target}|all|${rankScope}` : target] ?? []).map((row) => ({ date: row.as_of_date, value: numericOrNull(row[metricKey]) })),
       }));
       const pointCount = series.reduce((total, item) => total + item.points.length, 0);
       text("model-caption", `${metric.description} | 時系列 | 履歴点数 ${money.format(pointCount)}`);
