@@ -1,10 +1,10 @@
 {
   "schema_version": 4,
   "publication_layout": "year_shards_v1",
-  "pipeline_run_id": "ec82b594ed724d13a3c0c2323f4a16c7",
-  "publication_id": "8a76cb5028f147729f017dc84b909702",
-  "generated_at": "2026-09-18T00:53:26+09:00",
-  "as_of_date": "2026-09-17",
+  "pipeline_run_id": "be5d8eb887014122bff5c5b3d3e7b3be",
+  "publication_id": "264f6051563f464fb562910f1f5fc395",
+  "generated_at": "2026-09-19T01:09:42+09:00",
+  "as_of_date": "2026-09-18",
   "strategy_sha256": "6e8d5035c2eca01ce24bcc341fe65596a908159f832824cf9a43429a9b3bf21b",
   "model_config_sha256": "323b701962eb6cee77e1bb824692527b04159eaf5f9eeb3d358d43bea79179e3",
   "ranking_config_sha256": "143b66e0b321a923b04cebc7be9e43674630d3b9dc1d4fea173ef5bd334f62e8",
@@ -26,18 +26,18 @@
   "portfolio_data_status_counts": [
     {
       "data_status": "official",
-      "row_count": 54140
+      "row_count": 54149
     },
     {
       "data_status": "provisional",
-      "row_count": 8644
+      "row_count": 8659
     }
   ],
   "data_status_summary": [
     {
       "entity": "prediction",
       "data_status": "official",
-      "row_count": 17372314
+      "row_count": 17380357
     },
     {
       "entity": "prediction",
@@ -47,27 +47,27 @@
     {
       "entity": "ranking",
       "data_status": "official",
-      "row_count": 24107211
+      "row_count": 24118494
     },
     {
       "entity": "top_n_set",
       "data_status": "official",
-      "row_count": 62808
+      "row_count": 62832
     },
     {
       "entity": "top_n_probability",
       "data_status": "official",
-      "row_count": 2546048
+      "row_count": 2546982
     },
     {
       "entity": "prediction_evaluation",
       "data_status": "official",
-      "row_count": 17271223
+      "row_count": 17279230
     },
     {
       "entity": "prediction_evaluation",
       "data_status": "provisional",
-      "row_count": 313
+      "row_count": 322
     },
     {
       "entity": "model_metric",
@@ -77,7 +77,7 @@
     {
       "entity": "model_metric",
       "data_status": "provisional",
-      "row_count": 2800
+      "row_count": 2826
     },
     {
       "entity": "confidence_metric",
@@ -87,7 +87,7 @@
     {
       "entity": "confidence_metric",
       "data_status": "provisional",
-      "row_count": 40
+      "row_count": 42
     },
     {
       "entity": "prediction_quantile_metric",
@@ -97,22 +97,22 @@
     {
       "entity": "prediction_quantile_metric",
       "data_status": "provisional",
-      "row_count": 400
+      "row_count": 420
     },
     {
       "entity": "portfolio",
       "data_status": "official",
-      "row_count": 54140
+      "row_count": 54149
     },
     {
       "entity": "portfolio",
       "data_status": "provisional",
-      "row_count": 8644
+      "row_count": 8659
     },
     {
       "entity": "matched_benchmark",
       "data_status": "official",
-      "row_count": 62781
+      "row_count": 62805
     },
     {
       "entity": "matched_benchmark",
@@ -122,7 +122,7 @@
     {
       "entity": "benchmark_buy_and_hold",
       "data_status": "official",
-      "row_count": 5231
+      "row_count": 5233
     }
   ],
   "has_provisional_data": true,
@@ -156,59 +156,59 @@
     {
       "logical_name": "latest_predictions_target_5d.json",
       "format": "single_json_v1",
-      "path": "current/latest_predictions_target_5d.c78417decff7e8ad.json",
-      "sha256": "c78417decff7e8ade8f0d4f94cb35cdee9eb56c9d14b21431488c4e02083befb",
-      "bytes": 8300427
+      "path": "current/latest_predictions_target_5d.d608b4fab356e37f.json",
+      "sha256": "d608b4fab356e37f66466f0444b8f8978e8a93da75d101d195e1b8c65c7fcc76",
+      "bytes": 8308678
     },
     {
       "logical_name": "rankings_target_5d.json",
       "format": "single_json_v1",
-      "path": "current/rankings_target_5d.b496161ef8914031.json",
-      "sha256": "b496161ef891403181eef57e08c7dd42aaf1c4061f79807d1733e7c603b258fc",
-      "bytes": 3382793
+      "path": "current/rankings_target_5d.0b985fa29ad21930.json",
+      "sha256": "0b985fa29ad219305d9dbad24d7fa261a6a275f92dca1b799b206d7f3bfb8555",
+      "bytes": 3386481
     },
     {
       "logical_name": "top_n_probabilities_target_5d.json",
       "format": "single_json_v1",
-      "path": "current/top_n_probabilities_target_5d.621d2d4ee1b0571a.json",
-      "sha256": "621d2d4ee1b0571a23ca19a30869e102b70d98d11acd810afe37b9ac5993ca48",
-      "bytes": 226292
+      "path": "current/top_n_probabilities_target_5d.0f1b7a150d5b13e0.json",
+      "sha256": "0f1b7a150d5b13e0d5750715fbb3d27795bc24e679720851253b4f64b1c4b7a2",
+      "bytes": 223350
     },
     {
       "logical_name": "latest_predictions_target_20d.json",
       "format": "single_json_v1",
-      "path": "current/latest_predictions_target_20d.6c182c359dc1a115.json",
-      "sha256": "6c182c359dc1a1158bf697970774d7d041432313555d69df4e7087265c728aa6",
-      "bytes": 8288166
+      "path": "current/latest_predictions_target_20d.913a3920f7b4c033.json",
+      "sha256": "913a3920f7b4c0337cdcdce995ad0ade6cd6094dcbb686aa8c082ba3d210ae1c",
+      "bytes": 8294883
     },
     {
       "logical_name": "rankings_target_20d.json",
       "format": "single_json_v1",
-      "path": "current/rankings_target_20d.ba7bf4447db8292d.json",
-      "sha256": "ba7bf4447db8292de6e3f919f721e0d682308c88309fa613bf821d9c54bfae23",
-      "bytes": 3391892
+      "path": "current/rankings_target_20d.89c8a9f977be03ff.json",
+      "sha256": "89c8a9f977be03fff0aaba7b012e08d8db597883dcbea3a3a9f1d597dc7c9006",
+      "bytes": 3395161
     },
     {
       "logical_name": "top_n_probabilities_target_20d.json",
       "format": "single_json_v1",
-      "path": "current/top_n_probabilities_target_20d.e2a0305cd8f34819.json",
-      "sha256": "e2a0305cd8f34819742e66ae6b569d5bae145ea9fb47c071cfa4c7924212302c",
-      "bytes": 251610
+      "path": "current/top_n_probabilities_target_20d.e24b08b99c3be6b1.json",
+      "sha256": "e24b08b99c3be6b103c1c555dbf6b162ab20b8e1bd4e63f9170e069081bce079",
+      "bytes": 242671
     },
     {
       "logical_name": "symbol_price_history.json",
       "format": "single_json_v1",
-      "path": "current/symbol_price_history.0c61bb7bac7f09cc.json",
-      "sha256": "0c61bb7bac7f09cc062657a2dafe6c8cb4ed1f06d444c8d7c50b1c1f3c88c9b2",
-      "bytes": 5270959
+      "path": "current/symbol_price_history.afe80a1e240e7d66.json",
+      "sha256": "afe80a1e240e7d6607f82a61b0ed4743f6fbe6f3d698219bc7451f8be4f9c1b1",
+      "bytes": 5274933
     },
     {
       "logical_name": "model_evaluation_summary.json",
       "format": "year_shards_v1",
-      "path": "current/model_evaluation_summary.23c2d512e7a9f873.json",
-      "sha256": "23c2d512e7a9f873cad9761f580c606d8469edd8c4adcc7f5a7bd2b8df699309",
-      "bytes": 2194,
-      "total_bytes": 5729506,
+      "path": "current/model_evaluation_summary.ac50586af7111f41.json",
+      "sha256": "ac50586af7111f41e66d49facdfe5bab3728bb6799a2b2f225ec492cb10b84a4",
+      "bytes": 2199,
+      "total_bytes": 5731739,
       "years": [
         "2016",
         "2017",
@@ -285,19 +285,19 @@
         },
         {
           "year": "2026",
-          "path": "history/model_evaluation_summary/2026.6baef1aad3a0ec6d.json",
-          "sha256": "6baef1aad3a0ec6dcb7ceda51de57e66b01fb3bf380544f6603d73f94421b681",
-          "bytes": 377786
+          "path": "history/model_evaluation_summary/2026.cbaf0ad3d1a0643f.json",
+          "sha256": "cbaf0ad3d1a0643ffc25846ba2fbc4b7d278361e3e91158485e7e3010e4fbb9c",
+          "bytes": 380014
         }
       ]
     },
     {
       "logical_name": "top_n_metrics.json",
       "format": "year_shards_v1",
-      "path": "current/top_n_metrics.b57e76b4a7b1ccdd.json",
-      "sha256": "b57e76b4a7b1ccdd53cc2c2b5378ab07b717cb947b4b8bc238344cf1bf45418b",
-      "bytes": 27643,
-      "total_bytes": 77423196,
+      "path": "current/top_n_metrics.2ae374e76a0b2d1e.json",
+      "sha256": "2ae374e76a0b2d1ed0431a30ad77c4344764713c4468a4936b2dbb03be1d41a9",
+      "bytes": 27646,
+      "total_bytes": 77452152,
       "years": [
         "2016",
         "2017",
@@ -374,71 +374,71 @@
         },
         {
           "year": "2026",
-          "path": "history/top_n_metrics/2026.60475b5ef731f099.json",
-          "sha256": "60475b5ef731f099f0b565aa55e5e5e9fff72258560a6a95b0fa1d26139473cd",
-          "bytes": 5012621
+          "path": "history/top_n_metrics/2026.81edb908662903c1.json",
+          "sha256": "81edb908662903c156ef14250f31be5437186e11d8fac3bc3081ddaa4e9553c9",
+          "bytes": 5041574
         }
       ]
     },
     {
       "logical_name": "confidence_metrics.json",
       "format": "year_shards_v1",
-      "path": "current/confidence_metrics.1221edaf56da8227.json",
-      "sha256": "1221edaf56da8227b7210c9f27e9734a754fdad4e00fd4bdea3c8cf40ee954ad",
+      "path": "current/confidence_metrics.d4f531c1767513bd.json",
+      "sha256": "d4f531c1767513bd37c4cae9dc006eb348e6c993c045918d9b2b07fd378dc234",
       "bytes": 34,
-      "total_bytes": 23882,
+      "total_bytes": 25009,
       "years": [
         "2026"
       ],
       "shards": [
         {
           "year": "2026",
-          "path": "history/confidence_metrics/2026.bec7ae73936418f4.json",
-          "sha256": "bec7ae73936418f4d9e5b0a6bccdf438f3a0458c6addd776a3a17971d179ad8d",
-          "bytes": 23848
+          "path": "history/confidence_metrics/2026.8c6a35f818a96ec7.json",
+          "sha256": "8c6a35f818a96ec7a8b294c99dcf139b6dccf5f745412fc5cc1e603ffe3c42f3",
+          "bytes": 24975
         }
       ]
     },
     {
       "logical_name": "prediction_quantiles.json",
       "format": "year_shards_v1",
-      "path": "current/prediction_quantiles.1221edaf56da8227.json",
-      "sha256": "1221edaf56da8227b7210c9f27e9734a754fdad4e00fd4bdea3c8cf40ee954ad",
+      "path": "current/prediction_quantiles.d4f531c1767513bd.json",
+      "sha256": "d4f531c1767513bd37c4cae9dc006eb348e6c993c045918d9b2b07fd378dc234",
       "bytes": 34,
-      "total_bytes": 178936,
+      "total_bytes": 187441,
       "years": [
         "2026"
       ],
       "shards": [
         {
           "year": "2026",
-          "path": "history/prediction_quantiles/2026.a14d4cb0390e2d6a.json",
-          "sha256": "a14d4cb0390e2d6a219089a8b4f32f38b6360533723b2158b327aa8d82757921",
-          "bytes": 178902
+          "path": "history/prediction_quantiles/2026.084bc21fb0ef5457.json",
+          "sha256": "084bc21fb0ef5457ccd1a6be0d6e6eb6121f1e1034aca5b2ac34d2369484b29a",
+          "bytes": 187407
         }
       ]
     },
     {
       "logical_name": "prediction_evaluations.json",
       "format": "single_json_v1",
-      "path": "current/prediction_evaluations.1aa4de71d1a5ad86.json",
-      "sha256": "1aa4de71d1a5ad8648b7c6f66ec5e75c373881daecfd91491442be6b0a21e626",
-      "bytes": 7275429
+      "path": "current/prediction_evaluations.9cce36c4e7feb491.json",
+      "sha256": "9cce36c4e7feb4917460d3d2c89eb9f8343d138b37288284d05113db9402a3d2",
+      "bytes": 7275343
     },
     {
       "logical_name": "portfolios.json",
       "format": "single_json_v1",
-      "path": "current/portfolios.e687379501ec4827.json",
-      "sha256": "e687379501ec48271f5b6d7b2e4e0988b4a49df6a0466f4db5f4f4ea80ecfe3b",
-      "bytes": 39440
+      "path": "current/portfolios.b125d84d0d669b8c.json",
+      "sha256": "b125d84d0d669b8cb1cfa14f5107659a587b39e0b7c285070dbb00b80d54a01b",
+      "bytes": 39309
     },
     {
       "logical_name": "portfolio_history.json",
       "format": "year_shards_v1",
-      "path": "current/portfolio_history.e5c52100429346c2.json",
-      "sha256": "e5c52100429346c29d29ed09063006868341af099b69cedeb2f26c2bbf4a4941",
+      "path": "current/portfolio_history.850d12b81b57afcf.json",
+      "sha256": "850d12b81b57afcf60e046dc86da66bf851b588f5e9f4f99e17d3458dd096ecb",
       "bytes": 60,
-      "total_bytes": 135810895,
+      "total_bytes": 135863332,
       "years": [
         "2016",
         "2017",
@@ -515,19 +515,19 @@
         },
         {
           "year": "2026",
-          "path": "history/portfolio_history/2026.8f2dbe1c231dc217.json",
-          "sha256": "8f2dbe1c231dc217f6b550185a66ded1019bc1c490ec5b2ee088174688cf0463",
-          "bytes": 9095508
+          "path": "history/portfolio_history/2026.9680275c9cb910bd.json",
+          "sha256": "9680275c9cb910bd916c39139e9513c449c984b98ae12e77e1a459740dde8d31",
+          "bytes": 9147945
         }
       ]
     },
     {
       "logical_name": "benchmark_buy_and_hold.json",
       "format": "year_shards_v1",
-      "path": "current/benchmark_buy_and_hold.e5c52100429346c2.json",
-      "sha256": "e5c52100429346c29d29ed09063006868341af099b69cedeb2f26c2bbf4a4941",
+      "path": "current/benchmark_buy_and_hold.850d12b81b57afcf.json",
+      "sha256": "850d12b81b57afcf60e046dc86da66bf851b588f5e9f4f99e17d3458dd096ecb",
       "bytes": 60,
-      "total_bytes": 5218153,
+      "total_bytes": 5220143,
       "years": [
         "2016",
         "2017",
@@ -604,18 +604,18 @@
         },
         {
           "year": "2026",
-          "path": "history/benchmark_buy_and_hold/2026.7fa1c5e45563c5d5.json",
-          "sha256": "7fa1c5e45563c5d5f1e7212f965540a9d54d977460dd7722b0d4298b13afb191",
-          "bytes": 346461
+          "path": "history/benchmark_buy_and_hold/2026.721c77cea22b7f63.json",
+          "sha256": "721c77cea22b7f63b001b8a869c119e6413fcf665fb39e40c7d1804825e00933",
+          "bytes": 348451
         }
       ]
     },
     {
       "logical_name": "model_status.json",
       "format": "single_json_v1",
-      "path": "current/model_status.0dcd93eb69a7ddac.json",
-      "sha256": "0dcd93eb69a7ddac49ae6e00410f68efe12f5e80563d321bdbe194cb412bcf79",
-      "bytes": 5593826
+      "path": "current/model_status.92fce2b3258af57b.json",
+      "sha256": "92fce2b3258af57b1a0125fb2d267b8c390c8954925366467e2e2043b5ed6442",
+      "bytes": 5598252
     }
   ]
 }
