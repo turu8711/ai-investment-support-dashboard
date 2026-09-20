@@ -13,6 +13,8 @@
       mean_prediction_error: { label: "平均予測誤差", scale: 100, unit: "%", description: "平均予測リターン - 平均実績リターン" },
     };
     const modelMetrics = {
+      mean_absolute_return: { label: "平均変動率（ベンチマーク）", scale: 100, unit: "%", description: "MAEと同じ累積評価対象の平均絶対実績リターン（0%固定予測のMAE）" },
+      mae_benchmark: { label: "MAEと平均変動率（ベンチマーク）", scale: 100, unit: "%", description: "同じ評価対象で比較。MAEが平均変動率より小さいほど0%固定予測より誤差が小さい" },
       mae: { label: "MAE", scale: 100, unit: "%", description: "予測リターンと実績リターンの絶対誤差平均" },
       rmse: { label: "RMSE", scale: 100, unit: "%", description: "大きな誤差へ強く反応する二乗平均平方根誤差" },
       direction_accuracy: { label: "方向性一致率", scale: 100, unit: "%", domain: [0, 100], description: "上昇・下落の符号が一致した割合" },
@@ -892,6 +894,23 @@
       AnalysisDateRanges.controls("model", modelChartMode === "line", drawModelChart);
 
       const targets = ["target_5d", "target_20d"];
+      if (metricKey === "mae_benchmark") {
+        const definitions = [["mae", "MAE"], ["mean_absolute_return", "平均変動率（ベンチマーク）"]];
+        const colors = ["#245ea8", "#ad5420", "#08775c", "#9245a3"];
+        text("model-caption", `${metric.description} | 累積値・5d/20d別`);
+        if (modelChartMode === "bar") {
+          const rows = new Map((chartPayload.model?.rows ?? []).map(row => [row.target, row]));
+          drawGroupedBarChart({ canvasId: "model-chart", shellId: "model-chart-shell", emptyId: "model-chart-empty",
+            labels: ["5d", "20d"], metric, geometryKey: "model",
+            dates: targets.map(target => rows.get(target)?.as_of_date ?? null),
+            series: definitions.map(([key, label], i) => ({ label, color: colors[i], values: targets.map(target => numericOrNull(rows.get(target)?.[key])) })) });
+        } else {
+          drawMetricLineChart({ canvasId: "model-chart", shellId: "model-chart-shell", emptyId: "model-chart-empty", metric, geometryKey: "model",
+            series: targets.flatMap((target, i) => definitions.map(([key, label], j) => ({ label: `${target === "target_5d" ? "5d" : "20d"} ${label}`, color: colors[i * 2 + j],
+              points: AnalysisDateRanges.filter("model", chartPayload.model?.history?.[target] ?? []).map(row => ({ date: row.as_of_date, value: numericOrNull(row[key]) })) }))) });
+        }
+        return;
+      }
       if (modelChartMode === "bar") {
         const rows = usesTopNRank
           ? (chartPayload.topN?.rows ?? []).filter((row) => row.liquidity_profile === "all" && Number(row.top_n) === Number(rankScope))

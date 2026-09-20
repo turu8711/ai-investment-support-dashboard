@@ -2,8 +2,8 @@
   "schema_version": 4,
   "publication_layout": "year_shards_v1",
   "pipeline_run_id": "be5d8eb887014122bff5c5b3d3e7b3be",
-  "publication_id": "264f6051563f464fb562910f1f5fc395",
-  "generated_at": "2026-09-19T01:09:42+09:00",
+  "publication_id": "24c337ca6ef44510a6483d007d8df3d7",
+  "generated_at": "2026-09-20T21:42:31+09:00",
   "as_of_date": "2026-09-18",
   "strategy_sha256": "6e8d5035c2eca01ce24bcc341fe65596a908159f832824cf9a43429a9b3bf21b",
   "model_config_sha256": "323b701962eb6cee77e1bb824692527b04159eaf5f9eeb3d358d43bea79179e3",
@@ -205,10 +205,10 @@
     {
       "logical_name": "model_evaluation_summary.json",
       "format": "year_shards_v1",
-      "path": "current/model_evaluation_summary.ac50586af7111f41.json",
-      "sha256": "ac50586af7111f41e66d49facdfe5bab3728bb6799a2b2f225ec492cb10b84a4",
-      "bytes": 2199,
-      "total_bytes": 5731739,
+      "path": "current/model_evaluation_summary.54d094ded0804b71.json",
+      "sha256": "54d094ded0804b7146b385a7a5657bf74b638426e66a66ed359407b34e55d40a",
+      "bytes": 2273,
+      "total_bytes": 6012685,
       "years": [
         "2016",
         "2017",
@@ -225,69 +225,69 @@
       "shards": [
         {
           "year": "2016",
-          "path": "history/model_evaluation_summary/2016.87ad2b3a2c3b2ef2.json",
-          "sha256": "87ad2b3a2c3b2ef22e5b01cd8a20542774eee2532b515e63e7af3bdce329db79",
-          "bytes": 510206
+          "path": "history/model_evaluation_summary/2016.5ca532d11996e7cd.json",
+          "sha256": "5ca532d11996e7cdc0735419f143a0af0aa080c1907011cc89b75ed6151c7cb0",
+          "bytes": 535345
         },
         {
           "year": "2017",
-          "path": "history/model_evaluation_summary/2017.7dbcc568efe51aa5.json",
-          "sha256": "7dbcc568efe51aa57b24cd6b3f92725c49e35ba45516cf5346ed0bd0c920b088",
-          "bytes": 543224
+          "path": "history/model_evaluation_summary/2017.b8320e0b8cfcef3b.json",
+          "sha256": "b8320e0b8cfcef3b9436cac0d51e86f7f173ab9a25524c9bc876d30f15e8429e",
+          "bytes": 569917
         },
         {
           "year": "2018",
-          "path": "history/model_evaluation_summary/2018.b9b172142246e233.json",
-          "sha256": "b9b172142246e233933bb8b1e5758e73ecdabed67017c470b2b1741ffe83048d",
-          "bytes": 539341
+          "path": "history/model_evaluation_summary/2018.71c3eae6b38ac13f.json",
+          "sha256": "71c3eae6b38ac13fc5de726b63967636bf846ad637bf86ba94cba79796b5dfa0",
+          "bytes": 565839
         },
         {
           "year": "2019",
-          "path": "history/model_evaluation_summary/2019.07594e6386adca7c.json",
-          "sha256": "07594e6386adca7c7c091b13d8187ba295e8c9a3ba933d8d450753f2a952054d",
-          "bytes": 530826
+          "path": "history/model_evaluation_summary/2019.653dffef54d59b91.json",
+          "sha256": "653dffef54d59b9100412f229877e4e97cda125b7349b38e01fd47a12caa07e5",
+          "bytes": 556881
         },
         {
           "year": "2020",
-          "path": "history/model_evaluation_summary/2020.2d6c615e8d0dd29d.json",
-          "sha256": "2d6c615e8d0dd29dceb738c077ee2aa5928b4384432357391262dd42eda65931",
-          "bytes": 532982
+          "path": "history/model_evaluation_summary/2020.dede8b1851dc9a1d.json",
+          "sha256": "dede8b1851dc9a1d0e0ee21cd866451758a69b114b2191f0d3f6d7239747b016",
+          "bytes": 559115
         },
         {
           "year": "2021",
-          "path": "history/model_evaluation_summary/2021.a47abbfc2b8af464.json",
-          "sha256": "a47abbfc2b8af4644efc3adc582e83a182b6a323324031fbf85b999505ae3f80",
-          "bytes": 539774
+          "path": "history/model_evaluation_summary/2021.88a23a769e4cb602.json",
+          "sha256": "88a23a769e4cb6021920b9ac81bbbfea497dc809adeedd2457392bcee1c5db28",
+          "bytes": 566254
         },
         {
           "year": "2022",
-          "path": "history/model_evaluation_summary/2022.7565f6144db580e6.json",
-          "sha256": "7565f6144db580e67211abcb011d1f90211ecf940553736d8dcafe609592a759",
-          "bytes": 537198
+          "path": "history/model_evaluation_summary/2022.621dbd0bfc65a198.json",
+          "sha256": "621dbd0bfc65a198cbb36a0ff3b10d6abebe59ae33d3d68a450afcac35d0388d",
+          "bytes": 563550
         },
         {
           "year": "2023",
-          "path": "history/model_evaluation_summary/2023.1545584ae0c73e79.json",
-          "sha256": "1545584ae0c73e79ec1d4c1b537e812846d40fc7b841e7290c6e58ca83c0049d",
-          "bytes": 541545
+          "path": "history/model_evaluation_summary/2023.4c0fa919e0c622df.json",
+          "sha256": "4c0fa919e0c622df8d90d86521d12ee8ed7d08a772157cea0b9c21648479583a",
+          "bytes": 568117
         },
         {
           "year": "2024",
-          "path": "history/model_evaluation_summary/2024.e721ce44f8702875.json",
-          "sha256": "e721ce44f87028759e969a207900fd56b5aeca60eebefb3e437f8a0454aff4d6",
-          "bytes": 539364
+          "path": "history/model_evaluation_summary/2024.a53f64a0720ebee0.json",
+          "sha256": "a53f64a0720ebee0adb93493ef5a13dc3484dc8997c350136db3eafffaea6266",
+          "bytes": 565833
         },
         {
           "year": "2025",
-          "path": "history/model_evaluation_summary/2025.2732c9c44787ed6d.json",
-          "sha256": "2732c9c44787ed6df4d1e50a11c2a9b7a971074d0ce5723d90a1d0b6308ce68a",
-          "bytes": 535066
+          "path": "history/model_evaluation_summary/2025.54fa4c4857388293.json",
+          "sha256": "54fa4c4857388293b85d5a3a15cc7d7488fde981973758898a43d45e055df079",
+          "bytes": 561328
         },
         {
           "year": "2026",
-          "path": "history/model_evaluation_summary/2026.cbaf0ad3d1a0643f.json",
-          "sha256": "cbaf0ad3d1a0643ffc25846ba2fbc4b7d278361e3e91158485e7e3010e4fbb9c",
-          "bytes": 380014
+          "path": "history/model_evaluation_summary/2026.d05d870156ecc8b3.json",
+          "sha256": "d05d870156ecc8b3a00affe7d47ca2fed4bf08dd3c55d2a93ed6b867fc5c611b",
+          "bytes": 398233
         }
       ]
     },
