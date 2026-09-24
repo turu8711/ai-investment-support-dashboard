@@ -1,5 +1,5 @@
 {
-  "as_of_date": "2026-09-18",
+  "as_of_date": "2026-09-24",
   "history_sessions": 0,
   "year": "2026",
   "rows": [
@@ -271,23 +271,36 @@
       "calibration_error": 0.012972819652610561,
       "prediction_interval_coverage": 0.9605986161274159,
       "top_bottom_spread": 0.00767497612331766,
-      "raw_rank_correlation": -0.006343692711748027,
-      "score_rank_correlation": 0.00719013758400234,
+      "raw_rank_correlation": -0.006343695824391681,
+      "score_rank_correlation": 0.007190138804190748,
       "data_status": "provisional",
-      "run_id": "be5d8eb887014122bff5c5b3d3e7b3be"
+      "run_id": "db8ea7ee12744cf78f1d72e612c1f744"
     },
     {
       "strategy_sha256": "6e8d5035c2eca01ce24bcc341fe65596a908159f832824cf9a43429a9b3bf21b",
       "as_of_date": "2026-09-18",
       "target": "target_20d",
-      "evaluated_count": 8635473,
-      "calibration_error": 0.012959603703678374,
-      "prediction_interval_coverage": 0.9606072533606439,
-      "top_bottom_spread": 0.007665400165644092,
-      "raw_rank_correlation": -0.0063394006860303205,
-      "score_rank_correlation": 0.00718017050462242,
+      "evaluated_count": 8635622,
+      "calibration_error": 0.012953421713204344,
+      "prediction_interval_coverage": 0.960607817248138,
+      "top_bottom_spread": 0.0076671291951975334,
+      "raw_rank_correlation": -0.006338141529948404,
+      "score_rank_correlation": 0.007181985828945858,
       "data_status": "provisional",
-      "run_id": "be5d8eb887014122bff5c5b3d3e7b3be"
+      "run_id": "db8ea7ee12744cf78f1d72e612c1f744"
+    },
+    {
+      "strategy_sha256": "6e8d5035c2eca01ce24bcc341fe65596a908159f832824cf9a43429a9b3bf21b",
+      "as_of_date": "2026-09-24",
+      "target": "target_20d",
+      "evaluated_count": 8639556,
+      "calibration_error": 0.012931160703595275,
+      "prediction_interval_coverage": 0.9606153371770494,
+      "top_bottom_spread": 0.007654459695934889,
+      "raw_rank_correlation": -0.006346415929918984,
+      "score_rank_correlation": 0.007159975084605525,
+      "data_status": "provisional",
+      "run_id": "db8ea7ee12744cf78f1d72e612c1f744"
     },
     {
       "strategy_sha256": "6e8d5035c2eca01ce24bcc341fe65596a908159f832824cf9a43429a9b3bf21b",
@@ -556,24 +569,37 @@
       "evaluated_count": 8637676,
       "calibration_error": 0.01431079841830395,
       "prediction_interval_coverage": 0.9565878599752989,
-      "top_bottom_spread": 0.004957329916933931,
-      "raw_rank_correlation": 0.010596001347967229,
-      "score_rank_correlation": 0.015385869847630879,
+      "top_bottom_spread": 0.0049573270420800964,
+      "raw_rank_correlation": 0.010595986948623012,
+      "score_rank_correlation": 0.01538584695359112,
       "data_status": "provisional",
-      "run_id": "be5d8eb887014122bff5c5b3d3e7b3be"
+      "run_id": "db8ea7ee12744cf78f1d72e612c1f744"
     },
     {
       "strategy_sha256": "6e8d5035c2eca01ce24bcc341fe65596a908159f832824cf9a43429a9b3bf21b",
       "as_of_date": "2026-09-18",
       "target": "target_5d",
-      "evaluated_count": 8641583,
-      "calibration_error": 0.0144263089328341,
-      "prediction_interval_coverage": 0.9565949895985493,
-      "top_bottom_spread": 0.004955720714160934,
-      "raw_rank_correlation": 0.010588854286860329,
-      "score_rank_correlation": 0.01537426675557964,
+      "evaluated_count": 8641633,
+      "calibration_error": 0.014426450180746361,
+      "prediction_interval_coverage": 0.9565952407374856,
+      "top_bottom_spread": 0.0049557133228415335,
+      "raw_rank_correlation": 0.010590316364507078,
+      "score_rank_correlation": 0.015375982786501263,
       "data_status": "provisional",
-      "run_id": "be5d8eb887014122bff5c5b3d3e7b3be"
+      "run_id": "db8ea7ee12744cf78f1d72e612c1f744"
+    },
+    {
+      "strategy_sha256": "6e8d5035c2eca01ce24bcc341fe65596a908159f832824cf9a43429a9b3bf21b",
+      "as_of_date": "2026-09-24",
+      "target": "target_5d",
+      "evaluated_count": 8645575,
+      "calibration_error": 0.01449162890780229,
+      "prediction_interval_coverage": 0.9565991851322787,
+      "top_bottom_spread": 0.004948144843355118,
+      "raw_rank_correlation": 0.010551092456663573,
+      "score_rank_correlation": 0.015330828696303905,
+      "data_status": "provisional",
+      "run_id": "db8ea7ee12744cf78f1d72e612c1f744"
     }
   ]
 }
