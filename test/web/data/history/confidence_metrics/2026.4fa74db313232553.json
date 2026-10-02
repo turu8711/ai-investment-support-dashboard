@@ -1,5 +1,5 @@
 {
-  "as_of_date": "2026-10-01",
+  "as_of_date": "2026-10-02",
   "history_sessions": 0,
   "year": "2026",
   "rows": [
@@ -349,23 +349,36 @@
       "calibration_error": 0.01268427561325781,
       "prediction_interval_coverage": 0.960626589104944,
       "top_bottom_spread": 0.007638210536253642,
-      "raw_rank_correlation": -0.0063847381551176375,
-      "score_rank_correlation": 0.007046283808090342,
+      "raw_rank_correlation": -0.0063847487446243145,
+      "score_rank_correlation": 0.007046274995846575,
       "data_status": "provisional",
-      "run_id": "d66df297e1ca48dd9df18d8e734b5aa4"
+      "run_id": "845f136eb8e34af9a992c549afbc1a4c"
     },
     {
       "strategy_sha256": "6e8d5035c2eca01ce24bcc341fe65596a908159f832824cf9a43429a9b3bf21b",
       "as_of_date": "2026-10-01",
       "target": "target_20d",
-      "evaluated_count": 8659705,
-      "calibration_error": 0.012600803608031948,
-      "prediction_interval_coverage": 0.9606293747881712,
-      "top_bottom_spread": 0.0076260878926275024,
-      "raw_rank_correlation": -0.006416094848220816,
-      "score_rank_correlation": 0.006998804706382895,
+      "evaluated_count": 8659849,
+      "calibration_error": 0.012594486463938999,
+      "prediction_interval_coverage": 0.9606300294612528,
+      "top_bottom_spread": 0.007625988670787391,
+      "raw_rank_correlation": -0.006416350098565045,
+      "score_rank_correlation": 0.006993172159159723,
       "data_status": "provisional",
-      "run_id": "d66df297e1ca48dd9df18d8e734b5aa4"
+      "run_id": "845f136eb8e34af9a992c549afbc1a4c"
+    },
+    {
+      "strategy_sha256": "6e8d5035c2eca01ce24bcc341fe65596a908159f832824cf9a43429a9b3bf21b",
+      "as_of_date": "2026-10-02",
+      "target": "target_20d",
+      "evaluated_count": 8663744,
+      "calibration_error": 0.012487177818880969,
+      "prediction_interval_coverage": 0.9606323778726611,
+      "top_bottom_spread": 0.007612823612145747,
+      "raw_rank_correlation": -0.006454770462276171,
+      "score_rank_correlation": 0.006943346858370014,
+      "data_status": "provisional",
+      "run_id": "845f136eb8e34af9a992c549afbc1a4c"
     },
     {
       "strategy_sha256": "6e8d5035c2eca01ce24bcc341fe65596a908159f832824cf9a43429a9b3bf21b",
@@ -713,23 +726,36 @@
       "calibration_error": 0.01448343553766013,
       "prediction_interval_coverage": 0.9566038025575829,
       "top_bottom_spread": 0.004921051764791272,
-      "raw_rank_correlation": 0.010393061022618034,
-      "score_rank_correlation": 0.015172176118081348,
+      "raw_rank_correlation": 0.010393045626679075,
+      "score_rank_correlation": 0.015172171471972808,
       "data_status": "provisional",
-      "run_id": "d66df297e1ca48dd9df18d8e734b5aa4"
+      "run_id": "845f136eb8e34af9a992c549afbc1a4c"
     },
     {
       "strategy_sha256": "6e8d5035c2eca01ce24bcc341fe65596a908159f832824cf9a43429a9b3bf21b",
       "as_of_date": "2026-10-01",
       "target": "target_5d",
-      "evaluated_count": 8665250,
-      "calibration_error": 0.014426734749651707,
-      "prediction_interval_coverage": 0.9566118692478578,
-      "top_bottom_spread": 0.004913016223036008,
-      "raw_rank_correlation": 0.010355745713187328,
-      "score_rank_correlation": 0.015129158598105437,
+      "evaluated_count": 8665299,
+      "calibration_error": 0.014425891032623754,
+      "prediction_interval_coverage": 0.9566121145963918,
+      "top_bottom_spread": 0.004913037214792771,
+      "raw_rank_correlation": 0.010354231733377734,
+      "score_rank_correlation": 0.015127875823185796,
       "data_status": "provisional",
-      "run_id": "d66df297e1ca48dd9df18d8e734b5aa4"
+      "run_id": "845f136eb8e34af9a992c549afbc1a4c"
+    },
+    {
+      "strategy_sha256": "6e8d5035c2eca01ce24bcc341fe65596a908159f832824cf9a43429a9b3bf21b",
+      "as_of_date": "2026-10-02",
+      "target": "target_5d",
+      "evaluated_count": 8669171,
+      "calibration_error": 0.014319240432719416,
+      "prediction_interval_coverage": 0.9566196121866786,
+      "top_bottom_spread": 0.00490340338975609,
+      "raw_rank_correlation": 0.010307615859629384,
+      "score_rank_correlation": 0.015075153898695752,
+      "data_status": "provisional",
+      "run_id": "845f136eb8e34af9a992c549afbc1a4c"
     }
   ]
 }
